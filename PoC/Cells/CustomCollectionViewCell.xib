@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,9 +15,62 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomCollectionViewCell" customModule="PoC" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="382" height="412"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BYG-Ej-z69">
+                    <rect key="frame" x="10" y="10" width="362" height="290"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="BYG-Ej-z69" secondAttribute="height" multiplier="181:145" id="BIi-kh-lqt"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="FnD-kB-kf4">
+                    <rect key="frame" x="16" y="310" width="326" height="82"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycv-Ok-v4P">
+                            <rect key="frame" x="0.0" y="0.0" width="326" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXu-19-8ZU">
+                            <rect key="frame" x="0.0" y="20.5" width="326" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayu-Rq-GA1">
+                            <rect key="frame" x="0.0" y="41" width="326" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6u-Ep-ee9">
+                            <rect key="frame" x="0.0" y="61.5" width="326" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BYG-Ej-z69" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="1ab-2i-ERW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FnD-kB-kf4" secondAttribute="trailing" constant="40" id="67N-xh-rtp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="FnD-kB-kf4" secondAttribute="bottom" constant="20" id="Ojm-jt-avf"/>
+                <constraint firstItem="FnD-kB-kf4" firstAttribute="top" secondItem="BYG-Ej-z69" secondAttribute="bottom" constant="10" id="WQD-17-ug4"/>
+                <constraint firstItem="BYG-Ej-z69" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="Xoa-8j-dse"/>
+                <constraint firstItem="FnD-kB-kf4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="ewe-Op-awz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BYG-Ej-z69" secondAttribute="trailing" constant="10" id="rXz-cp-UOy"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imageView" destination="BYG-Ej-z69" id="1FW-Mx-lwF"/>
+                <outlet property="title1" destination="ycv-Ok-v4P" id="jYc-W4-Nch"/>
+                <outlet property="title2" destination="MXu-19-8ZU" id="P1R-4A-GAU"/>
+                <outlet property="title3" destination="Ayu-Rq-GA1" id="4Ik-cs-pVi"/>
+                <outlet property="title4" destination="I6u-Ep-ee9" id="pdY-Ta-6Ra"/>
+            </connections>
             <point key="canvasLocation" x="29" y="-76"/>
         </view>
     </objects>

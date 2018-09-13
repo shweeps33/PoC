@@ -9,7 +9,11 @@
 import UIKit
 
 class CVTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
